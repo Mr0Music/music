@@ -19,15 +19,19 @@ body {
   padding: 0;
 }
 
+img:not(.artist-img) {
+  height: 16px;
+}
+
 .logo img {
   height: 35px;
 }
 
-img {
-  height: 16px;
+.artist-img {
+  float: right;
 }
 
-.navbar ul {
+ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
@@ -37,18 +41,26 @@ img {
   overflow: hidden;
 }
 
-.navbar li {
+li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar li:hover {
-  background-color: #141414;
+li:hover * {
+  color: orange;
+}
+
+li svg {
+  fill: rgb(255, 255, 255);
+}
+
+li:hover svg {
+  fill: orange;
 }
 
 
-.navbar a {
+a {
   color: white;
   text-decoration: none;
   padding: 0 15px;
@@ -56,6 +68,7 @@ img {
 }
 
 h1 {
+  font-size: 2.5rem;
   color: #161A30;
 }
 
@@ -93,4 +106,22 @@ p {
     width: 100px;
     height: 100px;
   }
+}
+
+.links-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soc-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.soc-links li {
+  font-size: 2rem;
 }
