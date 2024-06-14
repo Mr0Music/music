@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+body {
+  background-image: url("../public/MY BG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-name, .profile-bio {
+  color: #dfe4ff;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1b1b1b;
   padding: 0;
-}
-
-.artist-img {
-  margin: 50px 10px 50px 20px;
-  float: right;
-}
-
-.artist-quote {
- margin-left: 1%;
 }
 
 .logo img {
@@ -70,6 +76,29 @@ p {
   margin-left: 1%;
 }
 
+.artist-img {
+  margin: 50px 10px 50px 20px;
+  float: right;
+}
+
+.artist-quote {
+  margin-left: 1%;
+}
+
+#quote-container {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 62%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #dfe4ff; 
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -116,4 +145,58 @@ p {
 
 .soc-links li {
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    background-color: #1b1b1b;
+    width: 100%;
+  }
+
+  .navbar li {
+    justify-content: flex-start;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .navbar li a {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .artist-img {
+    width: 100%;
+    margin: 20px 0;
+    float: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 10px;
+  }
+
+  .artist-quote {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  #quote-container {
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .soc-links {
+    width: 80%;
+  }
 }
